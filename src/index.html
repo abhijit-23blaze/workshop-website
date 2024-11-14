@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,18 +13,28 @@
         html {
             scroll-behavior: smooth;
         }
+
         .fade-in {
             animation: fadeIn 0.5s ease-in;
         }
+
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
     </style>
 </head>
+
 <body>
     <div id="root"></div>
-    
+
     <script type="text/babel">
         function WorkshopWebsite() {
             const [isScrolled, setIsScrolled] = React.useState(false);
@@ -39,17 +50,16 @@
             return (
                 <div className="min-h-screen bg-gray-50">
                     {/* Navbar */}
-                    <nav className={`fixed w-full z-50 transition-all duration-300 ${
-                        isScrolled ? 'bg-white shadow-lg' : 'bg-transparent'
-                    }`}>
+                    <nav className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white shadow-lg' : 'bg-transparent'
+                        }`}>
                         <div className="max-w-6xl mx-auto px-4">
                             <div className="flex justify-between items-center h-16">
-                                <div className="text-xl font-bold text-blue-600">DevWorkshop</div>
+                                <div className="text-xl font-bold text-black">ATAL</div>
                                 <div className="hidden md:flex space-x-8">
-                                    <a href="#home" className="hover:text-blue-600 transition-colors">Home</a>
-                                    <a href="#about" className="hover:text-blue-600 transition-colors">About</a>
-                                    <a href="#schedule" className="hover:text-blue-600 transition-colors">Schedule</a>
-                                    <a href="#register" className="hover:text-blue-600 transition-colors">Register</a>
+                                    <a href="#home" className="hover:text-white transition-colors">Home</a>
+                                    <a href="#about" className="hover:text-white transition-colors">About</a>
+                                    <a href="#schedule" className="hover:text-white transition-colors">Schedule</a>
+                                    <a href="#register" className="hover:text-white transition-colors">Register</a>
                                 </div>
                             </div>
                         </div>
@@ -60,10 +70,13 @@
                         <div className="absolute inset-0 bg-black opacity-10"></div>
                         <div className="max-w-6xl mx-auto px-4 relative">
                             <div className="fade-in">
-                                <h1 className="text-5xl font-bold mb-6">Web Development Workshop 2024</h1>
-                                <p className="text-xl mb-8 text-blue-100">Master modern web development techniques from industry experts</p>
-                                <a href="#register" 
-                                   className="inline-block bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold 
+                                <h1 className="text-5xl font-bold mb-6">AICTE ATAL Sponsored
+                                    Six-Day Faculty Development Program</h1>
+                                <p className="text-xl mb-8 text-blue-100">on
+                                    Emerging Techniques in Cyber Security for Building Resilient Network Infrastructure
+                                </p>
+                                <a href="#register"
+                                    className="inline-block bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold 
                                             hover:bg-blue-50 transition-colors shadow-lg">
                                     Join Workshop
                                 </a>
@@ -77,46 +90,37 @@
                             <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
                                 <div className="text-3xl mb-2">📅</div>
                                 <p className="font-bold text-gray-800">Date</p>
-                                <p className="text-gray-600">March 15, 2024</p>
-                            </div>
-                            <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-                                <div className="text-3xl mb-2">⏰</div>
-                                <p className="font-bold text-gray-800">Time</p>
-                                <p className="text-gray-600">9:00 AM - 5:00 PM</p>
+                                <p className="text-gray-600">December 9-14, 2024</p>
                             </div>
                             <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
                                 <div className="text-3xl mb-2">📍</div>
-                                <p className="font-bold text-gray-800">Location</p>
-                                <p className="text-gray-600">Tech Hub Center</p>
-                            </div>
-                            <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-                                <div className="text-3xl mb-2">👥</div>
-                                <p className="font-bold text-gray-800">Capacity</p>
-                                <p className="text-gray-600">30 Spots Available</p>
+                                <p className="font-bold text-gray-800">Mode</p>
+                                <p className="text-gray-600">Online (Google Meet / Zoom)</p>
                             </div>
                         </div>
                     </div>
 
-                    {/* About Section */}
+                    {/* Overview Section */}
                     <div id="about" className="max-w-6xl mx-auto px-4 py-24">
                         <div className="bg-white p-8 rounded-2xl shadow-lg">
-                            <h2 className="text-3xl font-bold mb-6 text-gray-800">About the Workshop</h2>
+                            <h2 className="text-3xl font-bold mb-6 text-gray-800">Overview</h2>
                             <div className="grid md:grid-cols-2 gap-8">
                                 <div>
                                     <p className="text-gray-600 leading-relaxed">
-                                        Join us for an intensive, hands-on workshop where you'll learn the latest
-                                        web development technologies and best practices. Perfect for beginners
-                                        and intermediate developers looking to level up their skills.
+                                        The workshop on Cybersecurity for Building Resilient Network Infrastructure will provide a comprehensive overview of key aspects in securing modern networks. It will begin with an Introduction to Cybersecurity, offering foundational knowledge of cybersecurity principles and their importance in safeguarding digital infrastructure. Participants will then explore various Cybersecurity Attacks and Measures, delving into common threats like malware, phishing, and DDoS attacks, along with strategies to counter them.
+                                        The session on Network Security and Tools will focus on securing network architecture using firewalls, intrusion detection systems, and encryption techniques. The Role of AI in Cybersecurity will highlight how machine learning and AI enhance threat detection and response capabilities. Attendees will also explore Websecurity and Java Backend to understand best practices in securing web applications and backend services.
+                                        The session on Network Security and Applications will showcase real-world applications and protocols for securing network traffic, while the Post-Quantum Security discussion will introduce emerging cryptographic techniques designed to withstand future quantum computing threats. This workshop aims to equip participants with practical knowledge and tools to enhance the resilience of their network infrastructure
+
                                     </p>
                                 </div>
                                 <div className="space-y-4">
                                     <div className="flex items-center space-x-3">
                                         <div className="bg-blue-100 p-2 rounded-lg">✨</div>
-                                        <p className="text-gray-700">Hands-on coding sessions</p>
+                                        <p className="text-gray-700">No Registration fee</p>
                                     </div>
                                     <div className="flex items-center space-x-3">
                                         <div className="bg-blue-100 p-2 rounded-lg">🎯</div>
-                                        <p className="text-gray-700">Real-world projects</p>
+                                        <p className="text-gray-700">Faculty, Research Students, Industry Professionals</p>
                                     </div>
                                     <div className="flex items-center space-x-3">
                                         <div className="bg-blue-100 p-2 rounded-lg">🤝</div>
@@ -126,48 +130,258 @@
                             </div>
                         </div>
                     </div>
+                    {/* About The Institute */}
+                    <div id="about" className="max-w-6xl mx-auto px-4 py-24">
+                        <div className="bg-white p-8 rounded-2xl shadow-lg">
+                            <h2 className="text-3xl font-bold mb-6 text-gray-800">About The Institute</h2>
+                            <div className="grid md:grid-cols-2 gap-8">
+                                <div>
+                                    <p className="text-gray-600 leading-relaxed">
+                                        Indian Institute of Information Technology Sri City (IIITS) was established in 2013 by Ministry of Education, Government of India as an Institute of National importance by an Act of Parliament. The institute is located in Sri City about 60 KMs from Chennai on the Nellore Highway. The Institute was setup by the Government of India along with Government of Andhra Pradesh and Industry Partners represented by Sri City Foundation as a Public-Private-Partnership (PPP) institution. IIITS offers B. Tech, M.Tech, M.S. and Ph. D. programmes in the areas of Computer Science & Engineering and Electronics & Communications Engineering.
+                                        IIIT Sri City, Chittoor, Andhra Pradesh is situated in Sri City which is a planned integrated business city located 55 km north of Chennai on NH 5 along the border of Andhra Pradesh (AP) and Tamil Nadu (TN) States of India. It is approximately 80 km away from Tirupati and 40 km away from Sri Kalahasti (Both are well known Temple cities in Andhra Pradesh).
+
+
+                                        For further details, please visit
+                                        https://www.iiits.ac.in
+
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
                     {/* Schedule Section */}
                     <div id="schedule" className="bg-gray-100 py-24">
                         <div className="max-w-6xl mx-auto px-4">
                             <h2 className="text-3xl font-bold mb-12 text-center text-gray-800">Workshop Schedule</h2>
-                            <div className="space-y-6">
-                                <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-                                    <div className="flex items-start space-x-4">
-                                        <div className="bg-blue-100 p-3 rounded-lg text-blue-600 font-bold">
-                                            9:00
-                                        </div>
-                                        <div>
-                                            <h3 className="font-bold text-lg text-gray-800">Morning Session</h3>
-                                            <p className="text-gray-600">Fundamentals and Setup</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-                                    <div className="flex items-start space-x-4">
-                                        <div className="bg-blue-100 p-3 rounded-lg text-blue-600 font-bold">
-                                            12:00
-                                        </div>
-                                        <div>
-                                            <h3 className="font-bold text-lg text-gray-800">Lunch Break</h3>
-                                            <p className="text-gray-600">Networking and Refreshments</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-                                    <div className="flex items-start space-x-4">
-                                        <div className="bg-blue-100 p-3 rounded-lg text-blue-600 font-bold">
-                                            1:00
-                                        </div>
-                                        <div>
-                                            <h3 className="font-bold text-lg text-gray-800">Afternoon Session</h3>
-                                            <p className="text-gray-600">Advanced Topics and Project Work</p>
-                                        </div>
-                                    </div>
-                                </div>
+                            <div className="aspect-w-16 aspect-h-9">
+                                <iframe
+                                    src="./ATAL_FDP.docx.pdf"
+                                    width="100px"
+                                    height="100%"
+                                    className="w-full h-full rounded-lg border-2 border-gray-300"
+                                    title="Workshop Schedule PDF"
+                                ></iframe>
                             </div>
                         </div>
                     </div>
+
+                    <div id="feature-section" className="bg-gray-100 py-24">
+                        <div className="max-w-4xl mx-auto px-4 flex flex-col md:flex-row items-center">
+                            <div className="w-full md:w-1/2 mb-8 md:mb-0">
+                                <img
+                                    src="./logo192.png"
+                                    alt="Descriptive Alt Text"
+                                    className="w-full h-auto rounded-lg shadow-lg"
+                                />
+                            </div>
+                            <div className="w-full md:w-1/2 md:pl-12 text-center md:text-left">
+                                <h2 className="text-3xl font-bold text-gray-800 mb-4">Chief Patron</h2>
+                                <p className="text-lg text-gray-600">
+                                    Prof. M.V. Kartikeyan<br/>
+                                    Director (Additional Charge)<br/>
+                                    IIIT Sri City, Chittoor
+
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="feature-section" className="bg-gray-100 py-24">
+                        <div className="max-w-6xl mx-auto px-4">
+
+                            {/* Section Title */}
+                            <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">Convenors</h2>
+
+                            {/* Grid Layout for Images and Titles */}
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+
+                                {/* First Image and Title */}
+                                <div className="flex flex-col items-center text-center">
+                                    <img
+                                        src="image.png"
+                                        alt="Dr. Odelu Vanga"
+                                        className="w-60 h-auto rounded-lg shadow-lg mb-4"
+                                    />
+                                    <h3 className="text-2xl font-bold text-gray-800 mb-2">Dr. Odelu Vanga</h3>
+                                    <p className="text-lg text-gray-600">
+                                        Assistant Professor
+                                        IIIT Sri City, Chittoor
+                                        odelu.vanga@iiits.in
+
+                                    </p>
+                                </div>
+
+                                {/* Second Image and Title */}
+                                <div className="flex flex-col items-center text-center">
+                                    <img
+                                        src="image2.png"
+                                        alt="Dr. Mallikarjun Reddy Dorasala"
+                                        className="w-60 h-auto rounded-lg shadow-lg mb-4"
+                                    />
+                                    <h3 className="text-2xl font-bold text-gray-800 mb-2">Dr. Mallikarjun Reddy Dorasala</h3>
+                                    <p className="text-lg text-gray-600">
+                                        Assistant Professor
+                                        IIIT Sri City, Chittoor
+                                        mallikarjunreddy.d@iiits.in
+
+                                    </p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div id="speakers-section" className="bg-gray-100 py-24">
+                        <div className="max-w-6xl mx-auto px-4">
+
+                            {/* Section Title */}
+                            <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">Speakers</h2>
+
+                            {/* Grid Layout for Speakers */}
+                            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-12">
+
+                                {/* Speaker 1 */}
+                                <div className="flex flex-col items-center text-center">
+                                    <img
+                                        src="speaker1.png"
+                                        alt="Speaker 1"
+                                        className="w-full h-auto rounded-lg shadow-lg mb-4"
+                                    />
+                                    <h3 className="text-2xl font-bold text-gray-800 mb-2">Speaker 1</h3>
+                                    <p className="text-lg text-gray-600">Brief description or caption for Speaker 1.</p>
+                                </div>
+
+                                {/* Speaker 2 */}
+                                <div className="flex flex-col items-center text-center">
+                                    <img
+                                        src="speaker2.png"
+                                        alt="Speaker 2"
+                                        className="w-full h-auto rounded-lg shadow-lg mb-4"
+                                    />
+                                    <h3 className="text-2xl font-bold text-gray-800 mb-2">Speaker 2</h3>
+                                    <p className="text-lg text-gray-600">Brief description or caption for Speaker 2.</p>
+                                </div>
+
+                                {/* Speaker 3 */}
+                                <div className="flex flex-col items-center text-center">
+                                    <img
+                                        src="speaker3.png"
+                                        alt="Speaker 3"
+                                        className="w-full h-auto rounded-lg shadow-lg mb-4"
+                                    />
+                                    <h3 className="text-2xl font-bold text-gray-800 mb-2">Speaker 3</h3>
+                                    <p className="text-lg text-gray-600">Brief description or caption for Speaker 3.</p>
+                                </div>
+
+                                {/* Speaker 4 */}
+                                <div className="flex flex-col items-center text-center">
+                                    <img
+                                        src="speaker4.png"
+                                        alt="Speaker 4"
+                                        className="w-full h-auto rounded-lg shadow-lg mb-4"
+                                    />
+                                    <h3 className="text-2xl font-bold text-gray-800 mb-2">Speaker 4</h3>
+                                    <p className="text-lg text-gray-600">Brief description or caption for Speaker 4.</p>
+                                </div>
+
+                                {/* Speaker 5 */}
+                                <div className="flex flex-col items-center text-center">
+                                    <img
+                                        src="speaker5.png"
+                                        alt="Speaker 5"
+                                        className="w-full h-auto rounded-lg shadow-lg mb-4"
+                                    />
+                                    <h3 className="text-2xl font-bold text-gray-800 mb-2">Speaker 5</h3>
+                                    <p className="text-lg text-gray-600">Brief description or caption for Speaker 5.</p>
+                                </div>
+
+                                {/* Speaker 6 */}
+                                <div className="flex flex-col items-center text-center">
+                                    <img
+                                        src="speaker6.png"
+                                        alt="Speaker 6"
+                                        className="w-full h-auto rounded-lg shadow-lg mb-4"
+                                    />
+                                    <h3 className="text-2xl font-bold text-gray-800 mb-2">Speaker 6</h3>
+                                    <p className="text-lg text-gray-600">Brief description or caption for Speaker 6.</p>
+                                </div>
+
+                                {/* Speaker 7 */}
+                                <div className="flex flex-col items-center text-center">
+                                    <img
+                                        src="speaker7.png"
+                                        alt="Speaker 7"
+                                        className="w-full h-auto rounded-lg shadow-lg mb-4"
+                                    />
+                                    <h3 className="text-2xl font-bold text-gray-800 mb-2">Speaker 7</h3>
+                                    <p className="text-lg text-gray-600">Brief description or caption for Speaker 7.</p>
+                                </div>
+
+                                {/* Speaker 8 */}
+                                <div className="flex flex-col items-center text-center">
+                                    <img
+                                        src="speaker8.png"
+                                        alt="Speaker 8"
+                                        className="w-full h-auto rounded-lg shadow-lg mb-4"
+                                    />
+                                    <h3 className="text-2xl font-bold text-gray-800 mb-2">Speaker 8</h3>
+                                    <p className="text-lg text-gray-600">Brief description or caption for Speaker 8.</p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div id="student-coordinators-section" className="bg-gray-100 py-24">
+                        <div className="max-w-6xl mx-auto px-4">
+
+                            {/* Section Title */}
+                            <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">Student Coordinators</h2>
+
+                            {/* Grid Layout for Student Coordinators */}
+                            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
+
+                                {/* Coordinator 1 */}
+                                <div className="flex flex-col items-center text-center">
+                                    <img
+                                        src="coordinator1.png"
+                                        alt="Coordinator 1"
+                                        className="w-full h-auto rounded-lg shadow-lg mb-4"
+                                    />
+                                    <h3 className="text-2xl font-bold text-gray-800 mb-2">Coordinator 1</h3>
+                                    <p className="text-lg text-gray-600">Brief description or caption for Coordinator 1.</p>
+                                </div>
+
+                                {/* Coordinator 2 */}
+                                <div className="flex flex-col items-center text-center">
+                                    <img
+                                        src="coordinator2.png"
+                                        alt="Coordinator 2"
+                                        className="w-full h-auto rounded-lg shadow-lg mb-4"
+                                    />
+                                    <h3 className="text-2xl font-bold text-gray-800 mb-2">Coordinator 2</h3>
+                                    <p className="text-lg text-gray-600">Brief description or caption for Coordinator 2.</p>
+                                </div>
+
+                                {/* Coordinator 3 */}
+                                <div className="flex flex-col items-center text-center">
+                                    <img
+                                        src="coordinator3.png"
+                                        alt="Coordinator 3"
+                                        className="w-full h-auto rounded-lg shadow-lg mb-4"
+                                    />
+                                    <h3 className="text-2xl font-bold text-gray-800 mb-2">Coordinator 3</h3>
+                                    <p className="text-lg text-gray-600">Brief description or caption for Coordinator 3.</p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+
 
                     {/* Registration Section */}
                     <div id="register" className="py-24">
@@ -192,4 +406,5 @@
         ReactDOM.render(<WorkshopWebsite />, document.getElementById('root'));
     </script>
 </body>
+
 </html>
